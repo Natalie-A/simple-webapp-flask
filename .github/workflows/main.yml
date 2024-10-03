@@ -45,7 +45,7 @@ jobs:
 
       - name: Load Docker image into Kind
         run: |
-          kind load docker-image natalieaoya/flask.webapp:latest
+          sudo kind load docker-image natalieaoya/flask.webapp:latest --name webapp
 
       - name: Apply Kubernetes manifests
         run: |
