@@ -81,12 +81,15 @@ Before you begin, ensure you have the following installed:
    ```bash
    git clone https://github.com/Natalie-A/simple-webapp-flask.git
    cd simple-webapp-flask
-   chmod +x deploy.sh
-   ./deploy.sh
    ```
 
-## 2. Test
+## 2. Deploy Locally
+   ```bash
+       chmod +x deploy.sh
+       ./deploy.sh
+   ```
 
+## 3. Test
 Open a browser and go to URL
 ```
 http://localhost:8080                           => Welcome
