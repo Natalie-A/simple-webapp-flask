@@ -35,7 +35,8 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-  type: ClusterIP
+    nodePort: 30001
+  type: NodePort
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -45,7 +46,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: internal-service
+      app: webapp
   policyTypes:
   - Ingress
   - Egress
@@ -54,7 +55,6 @@ spec:
     ports:
     - protocol: TCP
       port: 80
-
   egress:
   - to:
     - namespaceSelector:
