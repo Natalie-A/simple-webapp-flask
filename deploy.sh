@@ -4,7 +4,7 @@
 set -e
 
 # Create Kind cluster
-sudo kind create cluster --name webapp
+sudo kind create cluster --name webapp || { echo "Kind cluster already exists."; }
 
 # Load Docker image into Kind
 sudo docker pull natalieaoya/flask.webapp:latest
