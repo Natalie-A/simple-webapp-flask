@@ -85,8 +85,8 @@ Before you begin, ensure you have the following installed:
 
 ## 2. Deploy Locally
    ```bash
-       chmod +x deploy.sh
-       ./deploy.sh
+   chmod +x deploy.sh
+   ./deploy.sh
    ```
 
 ## 3. Test
