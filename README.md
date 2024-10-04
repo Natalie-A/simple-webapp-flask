@@ -8,8 +8,8 @@ This is a simple web application using Flask and MySQL that demonstrates a RESTf
 
 The app is containerized using Docker. The Dockerfile does the following:
 
-- Starts from a lightweight base image that supports Flask.
-- Installs Python 3 and necessary dependencies.
+- Starts from a lightweight base image that supports Python 3.
+- Installs Flask and necessary dependencies.
 - Copies the application code to the container.
 - Sets the entry point to run the Flask app on port 8080.
 
@@ -44,6 +44,16 @@ The Flask API has been deployed on a Kubernetes cluster using the following comp
 - **Docker**: The application is containerized using a Docker image, built from a simple Dockerfile that installs Flask and runs the app.
 - **Kubernetes Deployment**: The application is managed via a Kubernetes Deployment, which allows for scaling and self-healing of the application.
 - **Service**: A Kubernetes Service of type `NodePort` is used to expose the API externally, allowing it to be accessed from outside the cluster.
+
+I created a manifest file for deployment. It includes:
+
+- **Deployment**: Defines the app and its replicas.
+- **Service**: Exposes the app on a specific port.
+- **Network Policy**: Controls traffic to the app
+
+I applied the manifest to the cluster:
+
+``` kubectl apply -f k8s-deployment.yaml ```
 
 ### Security Measures
 
