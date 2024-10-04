@@ -75,5 +75,5 @@ Before you begin, ensure you have the following installed:
 Open a browser and go to URL
 ```
 http://localhost:8080                           => Welcome
-http://localhost:80808/how%20are%20you            => I am good, how about you?
+http://localhost:8080/how%20are%20you            => I am good, how about you?
 ```
