@@ -4,11 +4,11 @@
 set -e
 
 # Create Kind cluster
-kind create cluster --name webapp || { echo "Kind cluster already exists."; }
+sudo kind create cluster --name webapp || { echo "Kind cluster already exists."; }
 
 # Load Docker image into Kind
 sudo docker pull natalieaoya/flask.webapp:latest
-kind load docker-image natalieaoya/flask.webapp:latest --name webapp
+sudo kind load docker-image natalieaoya/flask.webapp:latest --name webapp
 
 # Apply Kubernetes manifests
 kubectl apply -f k8s-deployment.yaml
