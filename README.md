@@ -8,10 +8,10 @@ This is a simple web application using Flask and MySQL that demonstrates a RESTf
 
 The app is containerized using Docker. The Dockerfile does the following:
 
-Starts from a lightweight base image that supports Flask.
-Installs Python 3 and necessary dependencies.
-Copies the application code to the container.
-Sets the entry point to run the Flask app on port 8080.
+- Starts from a lightweight base image that supports Flask.
+- Installs Python 3 and necessary dependencies.
+- Copies the application code to the container.
+- Sets the entry point to run the Flask app on port 8080.
 
 ## CI/CD Process
 
