@@ -18,7 +18,7 @@ spec:
       - name: flask-webapp
         image: natalieaoya/flask.webapp:latest
         ports:
-        - containerPort: 80  
+        - containerPort: 8080 
       securityContext:  
         runAsUser: 1000 
         runAsGroup: 3000
@@ -34,7 +34,7 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 8080
     nodePort: 30001
   type: NodePort
 
