@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple Flask web application that serves as a demonstration of a RESTful API. It showcases the capabilities of Flask and can be easily extended.
+This is a simple web application using Flask and MySQL that demonstrates a RESTful API.
 
 ## Containerization
 
@@ -15,7 +15,7 @@ The app is containerized using Docker. The Dockerfile does the following:
 
 ## CI/CD Process
 
-The Continuous Integration and Continuous Deployment (CI/CD) process for this Flask app is set up using GitHub Actions. It automates the building and deployment of the application. Here are the key steps:
+The Continuous Integration and Continuous Deployment (CI/CD) process for this Flask app is set up using GitHub Actions. Here are the key steps:
 
 ### 1. Triggering the Pipeline
 
@@ -35,10 +35,6 @@ The Continuous Integration and Continuous Deployment (CI/CD) process for this Fl
 - **Create Kind Cluster**: A new cluster named `webapp` is created.
 - **Load Docker Image**: The latest Docker image is loaded into the Kind cluster.
 - **Apply Kubernetes Manifests**: The Kubernetes deployment and service configurations are applied, launching the application in the cluster.
-
-### Summary
-
-This CI/CD process ensures that any changes made to the code are automatically built, tested, and deployed, allowing for rapid and reliable updates to the application.
 
 
 ## Deployment on Kubernetes
