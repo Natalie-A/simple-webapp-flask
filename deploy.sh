@@ -11,6 +11,7 @@ sudo docker pull natalieaoya/flask.webapp:latest
 sudo kind load docker-image natalieaoya/flask.webapp:latest --name webapp
 
 # Apply Kubernetes manifests
+kubectl cluster-info --context kind-webapp
 kubectl apply -f k8s-deployment.yaml
 
 # Wait a few seconds for port forwarding to establish
