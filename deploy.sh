@@ -11,7 +11,7 @@ sudo docker pull natalieaoya/flask.webapp:latest
 sudo kind load docker-image natalieaoya/flask.webapp:latest --name webapp
 
 # Apply Kubernetes manifest
-mkdir ~/.kube
+mkdir ~/.kube || { echo "Directory already exists."; }
 sudo kind get kubeconfig --name webapp > ~/.kube/config
 kubectl apply -f k8s-deployment.yaml
 kubectl port-forward svc/flask-service 8080:80
