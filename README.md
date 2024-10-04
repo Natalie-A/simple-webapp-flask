@@ -8,10 +8,10 @@ This is a simple web application using Flask and MySQL that demonstrates a RESTf
 
 The app is containerized using Docker. The Dockerfile does the following:
 
-1. Starts from the Ubuntu 20.04 base image.
-2. Installs Python 3 and Flask.
-3. Copies the application code to the container.
-4. Sets the entry point to run the Flask app.
+Starts from a lightweight base image that supports Flask.
+Installs Python 3 and necessary dependencies.
+Copies the application code to the container.
+Sets the entry point to run the Flask app on port 8080.
 
 ## CI/CD Process
 
@@ -47,8 +47,13 @@ The Flask API has been deployed on a Kubernetes cluster using the following comp
 
 ### Security Measures
 
-- **Network Policies**: Implemented to restrict traffic between services and ensure that only authorized services can communicate with the Flask app.
-- **User and Group IDs**: The Flask app runs with specified user and group IDs to enhance security by following the principle of least privilege.
+- **Minimal Base Image**: The application uses a lightweight base image to reduce the attack surface.
+
+- **Non-Root User in Dockerfile**: The Flask application runs as a non-root user within the Docker container to minimize the risk of privilege escalation attacks.
+
+- **Non-Root User in Kubernetes Manifest**: The Kubernetes manifest specifies a non-root user and group ID for Pods, to restrict permissions and protecting the cluster from unauthorized access.
+
+- **Network Policies**: Network policies are implemented to control traffic between services, ensuring that only authorized Pods can communicate with the Flask application.
 
 # Flask Web App Deployment
 
