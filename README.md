@@ -56,7 +56,7 @@ The Flask API has been deployed on a Kubernetes cluster using the following comp
 
 Before you begin, ensure you have the following installed:
 
-- [Docker](https://www.docker.com/get-started)
+- [Docker](https://docs.docker.com/engine/install/)
 - [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
